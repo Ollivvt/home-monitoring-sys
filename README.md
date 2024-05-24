@@ -1,10 +1,17 @@
 # Home Monitoring Systems
-### 運作流程
-1. 載入模型辨識目標偵測
-    - 匯入TensorFlow Lite目標偵測的預訓練模型，並載入Interpreter，以進行 之後Model的調度跟作業
-2. 指定監控特定目標物
-    - 透過指定模型標籤的方式，進行特定目標物的影像動態監控，在顯示畫面上呈現各種動態提醒資訊
-3. 目標物出現在禁入區
-   - 透過位置座標資訊，以相對的螢幕顯示比例為原則，劃分禁入區域範圍，並且比較目標物的座標進行判斷
-4. 發送雲端訊息至裝置
-   - 透過程式條件，發生警報事件時，啟動IFTTT雲端服務機制，以進行LINE訊息資料的傳輸
+### Operation
+#### Load Model for Object Detection
+
+Import the pre-trained TensorFlow Lite object detection model and load the Interpreter for subsequent model scheduling and operations.
+
+#### Specify Monitoring for Specific Objects
+
+Monitor specific objects dynamically by specifying model labels, displaying various dynamic alert information on the screen.
+
+#### Object Appears in No-Entry Zone
+
+Define the no-entry zone by using position coordinate information, comparing the object's coordinates based on the relative screen display ratio.
+
+#### Send Cloud Messages to Devices
+
+Activate the IFTTT cloud service mechanism to send LINE message data when an alarm event occurs, based on the program conditions.
